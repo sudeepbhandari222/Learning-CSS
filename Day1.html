@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+      body{
+         background-color: azure;
+      }
+      .container{
+         display:grid;
+         grid-template-columns: 2fr 1fr 1fr;
+         gap: 40px;
+      }
+      .box{
+         background-color: steelblue;
+         text-align: center;
+         color: white;
+      }
+      .box:first-child{
+         grid-column: span 2;
+      }
+   </style>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CSS Grid</title>
+</head>
+<body>
+   <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+   </div>
+</body>
+</html>

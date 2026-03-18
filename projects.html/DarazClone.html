@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+      body{
+         color:white;
+         background-color: rgb(26, 26, 65);
+         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+         margin: 0;
+         padding: 0;
+      }
+      nav{
+         background-color: rgb(19, 19, 61);
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         position:static;
+      }
+      .navigation{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+      }
+      .all{
+         border-radius: 5px;
+         border:none;
+         background-color: rgb(145, 143, 143);
+         color:white;
+         padding-right: 10px;
+         text-align: center;
+      }
+      .TEXT{
+         width: 300px;
+         border: none;
+         border-radius: 5px;
+         background-color: rgb(75, 75, 133);
+         height: 20px;
+      }
+      .search{
+         width: 20px;
+         height: 20px;
+      }
+      option{
+         background-color: rgb(89, 89, 158);
+      }
+      .submit{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+      }
+      .return{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+      }
+      .cart{
+         width:55px;
+
+      }
+      h2{
+         border:2px solid transparent;
+         padding: 10px;
+         transition:border-color 0s;
+      }
+      h2:hover{
+         border-color: white;
+      }
+      header{
+         display: flex;
+         align-items: center;
+         gap: 20px;
+      }
+      .same{
+         background-color: rgb(26, 26, 65);
+         color: white;
+         border: none;
+         width: fit-content;
+         padding: 10px;
+      }
+      .same:hover{
+         cursor: pointer;
+      }
+   </style>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Amazon</title>
+</head>
+<body>
+   <nav>
+      <h2>Amazon</h2>
+      <div class="navigation">
+         <small>Deliver To</small>
+         <strong>Nepal</strong>
+      </div>
+      <form>
+      <select>
+         <option value="all" class="all">All</option>
+         <option value="null" class="all">Sull</option>
+         <option value="ball" class="all">Null</option>
+      </select>
+      <input class="TEXT" type="text">
+      <img src="/projects.html/OIP.webp" class="search">
+      </form>
+      <select>
+         <option value="eng">Englsih</option>
+         <option value="nep">Nepali</option>
+         <option value="hind">Hindi</option>
+         <option value="ben">Bengali</option>
+         <option value="chin">Chinese</option>
+         <option value="russ">Russian</option>
+      </select>
+      <div class="submit">
+         <small>Hello, Sign In</small>
+         <strong>Accounts & Lists</strong>
+      </div>
+      <div class="return">
+         <small>Returns</small>
+         <strong>& Orders</strong>
+      </div>
+      <img src="/projects.html/cart.webp" class="cart">
+   </nav>
+   <header>
+      <button class="same"><strong>All</strong></button>
+      <button class="same">Today's Deal</button>
+      <button class="same">Gift Cards</button>
+      <button class="same">Registry</button>
+      <button class="same">Sell</button>
+      <button class="same">Prime Video</button>
+      <button class="same">Customer Service</button>
+   </header>
+</body>
+</html>
