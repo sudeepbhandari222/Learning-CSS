@@ -133,12 +133,9 @@
             display: block;
         }
 
-        .sentence.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .sentence.visible { opacity: 1; transform: translateY(0); }
 
-        /* --- Buttons & Forms --- */
+        /* --- Buttons & Inputs --- */
         button {
             background: linear-gradient(45deg, #ff4d6d, #ff8fa3, #ff4d6d);
             background-size: 200% 200%;
@@ -167,19 +164,9 @@
             100% { box-shadow: 0 0 15px rgba(255, 77, 109, 0.5); }
         }
 
-        .form-group {
-            margin-bottom: 18px;
-            text-align: left;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 6px;
-            font-size: 0.95rem;
-            color: #ffb3c1;
-            font-weight: 600;
-        }
-
+        .form-group { margin-bottom: 18px; text-align: left; }
+        label { display: block; margin-bottom: 6px; font-size: 0.95rem; color: #ffb3c1; font-weight: 600; }
+        
         input[type="text"], input[type="date"], input[type="number"] {
             width: 100%;
             padding: 12px;
@@ -190,71 +177,28 @@
             box-sizing: border-box;
         }
 
-        .radio-group {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 12px;
-        }
-
+        .radio-group { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
         .radio-label {
-            display: flex;
-            align-items: center;
-            background: rgba(255, 77, 109, 0.1);
-            padding: 12px 15px;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 77, 109, 0.4);
-            cursor: pointer;
-            position: relative;
+            display: flex; align-items: center; background: rgba(255, 77, 109, 0.1);
+            padding: 12px 15px; border-radius: 10px; border: 1px solid rgba(255, 77, 109, 0.4);
+            cursor: pointer; position: relative;
         }
-
         .radio-label input { margin-right: 12px; transform: scale(1.2); accent-color: var(--primary-pink); }
 
-        /* --- Infinity Animation --- */
-        .infinity-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
+        .infinity-container { display: flex; align-items: center; gap: 10px; }
         .infinity-svg {
-            width: 40px;
-            height: 20px;
-            fill: none;
-            stroke: var(--primary-pink);
-            stroke-width: 3;
-            stroke-linecap: round;
-            filter: drop-shadow(0 0 5px var(--primary-pink));
+            width: 40px; height: 20px; fill: none; stroke: var(--primary-pink);
+            stroke-width: 3; stroke-linecap: round; filter: drop-shadow(0 0 5px var(--primary-pink));
         }
-
-        .infinity-path {
-            stroke-dasharray: 100;
-            stroke-dashoffset: 100;
-            animation: infinityLoop 3s linear infinite;
-        }
-
-        @keyframes infinityLoop {
-            0% { stroke-dashoffset: 200; }
-            100% { stroke-dashoffset: 0; }
-        }
+        .infinity-path { stroke-dasharray: 100; stroke-dashoffset: 100; animation: infinityLoop 3s linear infinite; }
+        @keyframes infinityLoop { 0% { stroke-dashoffset: 200; } 100% { stroke-dashoffset: 0; } }
 
         .hidden { display: none !important; }
 
-        #scene-4 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
         .final-text {
-            font-family: 'Pacifico', cursive;
-            font-size: 2rem;
-            color: var(--text-light);
-            text-shadow: 0 0 20px var(--primary-pink);
-            margin-bottom: 50px;
-            line-height: 1.4;
+            font-family: 'Pacifico', cursive; font-size: 1.8rem;
+            color: var(--text-light); text-shadow: 0 0 20px var(--primary-pink);
+            margin-bottom: 50px; line-height: 1.4;
         }
     </style>
 </head>
@@ -267,18 +211,16 @@
             </svg>
             <div class="heart-text">I am sorry<br>my love</div>
         </div>
-        
         <div class="apology-text" id="text-container">
             <span class="sentence">I am really sorry for hurting you day after day, and i am really thankful to you for always being by my side no matter how stupid acitivities i do to make you upset.</span>
             <span class="sentence">You are my home, you are my eveerything and you are the one and only person i ever want to be with for hte rest of my life.</span>
             <span class="sentence" style="font-family: 'Pacifico', cursive; font-size: 1.4rem; color: var(--primary-pink); margin-top: 20px;">I lovee you the most my dear wifey Ribu Bhandari.</span>
         </div>
-
         <button id="btn-next" class="hidden" onclick="showScene(2)">Next ❤️</button>
     </div>
 
     <div id="scene-2" class="container hidden">
-        <h2 style="font-family: 'Pacifico', cursive; color: var(--primary-pink); font-size: 2rem;">Please fill it my lovee ✨</h2>
+        <h2 style="font-family: 'Pacifico', cursive; color: var(--primary-pink);">Please fill it my lovee ✨</h2>
         <div class="form-group"><label>Your Name</label><input type="text" id="f-yname"></div>
         <div class="form-group"><label>Your Husband Name</label><input type="text" id="f-hname"></div>
         <div class="form-group"><label>Your Age</label><input type="number" id="f-yage"></div>
@@ -297,9 +239,7 @@
                     <input type="radio" name="love_amount" value="Infinity">
                     <div class="infinity-container">
                         <span>Infinity</span>
-                        <svg class="infinity-svg" viewBox="0 0 50 25">
-                            <path class="infinity-path" d="M12.5,18.75c-3.45,0-6.25-2.8-6.25-6.25s2.8-6.25,6.25-6.25c2.3,0,4.32,1.24,5.43,3.08l1.64,2.72c1.11,1.84,3.13,3.08,5.43,3.08c3.45,0,6.25-2.8,6.25-6.25s-2.8-6.25-6.25-6.25c-2.3,0-4.32,1.24-5.43,3.08l-1.64,2.72c-1.11,1.84-3.13,3.08-5.43,3.08Z"/>
-                        </svg>
+                        <svg class="infinity-svg" viewBox="0 0 50 25"><path class="infinity-path" d="M12.5,18.75c-3.45,0-6.25-2.8-6.25-6.25s2.8-6.25,6.25-6.25c2.3,0,4.32,1.24,5.43,3.08l1.64,2.72c1.11,1.84,3.13,3.08,5.43,3.08c3.45,0,6.25-2.8,6.25-6.25s-2.8-6.25-6.25-6.25c-2.3,0-4.32,1.24-5.43,3.08l-1.64,2.72c-1.11,1.84-3.13,3.08-5.43,3.08Z"/></svg>
                     </div>
                 </label>
             </div>
@@ -308,7 +248,7 @@
     </div>
 
     <div id="scene-3" class="container hidden">
-        <h2 style="font-family: 'Pacifico', cursive; color: var(--primary-pink); font-size: 2.2rem; margin-bottom: 30px;">One last question...</h2>
+        <h2 style="font-family: 'Pacifico', cursive; color: var(--primary-pink); font-size: 2.2rem;">One last question...</h2>
         <div class="form-group">
             <label style="font-size: 1.3rem; text-align: center;">Do you forgive your dear hubby?</label>
             <div class="radio-group" style="margin-top: 25px;">
@@ -321,7 +261,7 @@
         <button onclick="submitForm2()">Submit ❤️</button>
     </div>
 
-    <div id="scene-4" class="container hidden">
+    <div id="scene-4" class="container hidden" style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
         <div class="final-text">Thankyouuuuuu Soooo Mushhh Meriii Guidyaaaaaa,<br>I loveeeeeeeeee Youuuu Theee Mostttttt</div>
         <div class="heart-wrapper" style="width: 120px; height: 120px;">
             <svg viewBox="0 0 32 29.6" class="drawn-heart" style="animation: dropGlow 1s forwards, glowPulse 2s infinite;">
@@ -334,8 +274,7 @@
         function createFloatingHearts() {
             setInterval(() => {
                 const heart = document.createElement('div');
-                heart.classList.add('bg-heart');
-                heart.innerHTML = '❤️';
+                heart.classList.add('bg-heart'); heart.innerHTML = '❤️';
                 heart.style.left = Math.random() * 100 + 'vw';
                 heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
                 document.body.appendChild(heart);
@@ -353,9 +292,7 @@
                 setTimeout(() => {
                     sentence.classList.add('visible');
                     if (index === sentences.length - 1) {
-                        setTimeout(() => {
-                            document.getElementById('btn-next').classList.remove('hidden');
-                        }, 2000);
+                        setTimeout(() => { document.getElementById('btn-next').classList.remove('hidden'); }, 2000);
                     }
                 }, delay);
                 delay += 4000;
@@ -363,60 +300,63 @@
         };
 
         function showScene(sceneNumber) {
-            document.getElementById('scene-1').classList.add('hidden');
-            document.getElementById('scene-2').classList.add('hidden');
-            document.getElementById('scene-3').classList.add('hidden');
-            document.getElementById('scene-4').classList.add('hidden');
+            document.querySelectorAll('.container').forEach(c => c.classList.add('hidden'));
             document.getElementById('scene-' + sceneNumber).classList.remove('hidden');
             window.scrollTo(0, 0);
         }
 
-        function triggerFireworks() {
-            var duration = 15 * 1000;
-            var animationEnd = Date.now() + duration;
-            var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 100 };
-            function randomInRange(min, max) { return Math.random() * (max - min) + min; }
-            var interval = setInterval(function() {
-                var timeLeft = animationEnd - Date.now();
-                if (timeLeft <= 0) { return clearInterval(interval); }
-                var particleCount = 50 * (timeLeft / duration);
-                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
-                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
-            }, 250);
-        }
-
         function submitForm1() {
-            collectedData.wifeName = document.getElementById('f-yname').value;
-            collectedData.husbandName = document.getElementById('f-hname').value;
-            collectedData.wifeAge = document.getElementById('f-yage').value;
-            collectedData.husbandAge = document.getElementById('f-hage').value;
-            collectedData.wifeDob = document.getElementById('f-ydob').value;
-            collectedData.husbandDob = document.getElementById('f-hdob').value;
+            const yname = document.getElementById('f-yname').value;
+            const hname = document.getElementById('f-hname').value;
+            const yage = document.getElementById('f-yage').value;
+            const hage = document.getElementById('f-hage').value;
+            const ydob = document.getElementById('f-ydob').value;
+            const hdob = document.getElementById('f-hdob').value;
             const loveRadio = document.querySelector('input[name="love_amount"]:checked');
-            collectedData.loveAmount = loveRadio ? loveRadio.value : "None Selected";
+
+            // --- VALIDATION CHECK ---
+            if (!yname || !hname || !yage || !hage || !ydob || !hdob || !loveRadio) {
+                alert("Fill The Formmm My Loveeeeeeeeeee");
+                return;
+            }
+
+            collectedData = { yname, hname, yage, hage, ydob, hdob, loveAmount: loveRadio.value };
             showScene(3);
         }
 
         function submitForm2() {
             const forgiveRadio = document.querySelector('input[name="forgive"]:checked');
-            collectedData.forgiveness = forgiveRadio ? forgiveRadio.value : "None Selected";
-            
+
+            // --- VALIDATION CHECK ---
+            if (!forgiveRadio) {
+                alert("Fill The Formmm My Loveeeeeeeeeee");
+                return;
+            }
+
+            collectedData.forgiveness = forgiveRadio.value;
             showScene(4);
             triggerFireworks();
             sendDataToYou(collectedData);
         }
 
+        function triggerFireworks() {
+            var duration = 15 * 1000;
+            var animationEnd = Date.now() + duration;
+            var interval = setInterval(function() {
+                var timeLeft = animationEnd - Date.now();
+                if (timeLeft <= 0) return clearInterval(interval);
+                confetti({ particleCount: 50, startVelocity: 30, spread: 360, origin: { x: Math.random(), y: Math.random() - 0.2 } });
+            }, 250);
+        }
+
         function sendDataToYou(data) {
             // REPLACE THIS LINK WITH YOUR FORMSPREE ENDPOINT
             const formspreeUrl = "https://formspree.io/f/mgoppgqn"; 
-
             fetch(formspreeUrl, {
                 method: "POST",
                 headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
-            })
-            .then(response => { console.log("Data sent to husband!"); })
-            .catch(error => { console.error("Error:", error); });
+            });
         }
     </script>
 </body>
